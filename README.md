@@ -5,8 +5,7 @@
  [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=luis-fer993&theme=buefy-dark&date_format=M%20j%5B%2C%20Y%5D)](https://git.io/streak-stats)
  
   
-<h2>Skills<h2>
-  
+## Skills
 [![GitHub Streak](https://img.shields.io/badge/html-orange?style=for-the-badge&logo=html5&logoColor=orange&labelColor=5f6368)](https://git.io/streak-stats) 
 [![GitHub Streak](https://img.shields.io/badge/CSS-blue?style=for-the-badge&logo=css3&logoColor=blue&labelColor=5f6368)](https://git.io/streak-stats) 
 [![GitHub Streak](https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=yellow&labelColor=5f6368)](https://git.io/streak-stats) 
