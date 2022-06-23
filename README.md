@@ -18,6 +18,15 @@
 <br>
 [![GitHub Streak](https://img.shields.io/badge/Linux-blueviolet?style=for-the-badge&logo=linux&logoColor=black&labelColor=5f6368)](https://git.io/streak-stats) 
 [![GitHub Streak](https://img.shields.io/badge/vs%20code-blue?style=for-the-badge&logo=visualstudiocode&logoColor=black&labelColor=5f6368)](https://git.io/streak-stats)
+[![GitHub Streak](https://img.shields.io/badge/Terminal-blue?style=for-the-badge&logo=iTerm2&logoColor=black&labelColor=5f6368)](https://git.io/streak-stats)
+---
+## Skills in learning
+
+[![GitHub Streak](https://img.shields.io/badge/Hack%20The%20Box-blue?style=for-the-badge&logo=Hack%20The%20Box&logoColor=#9FEF00&labelColor=red)](https://git.io/streak-stats)
+[![GitHub Streak](https://img.shields.io/badge/Node.js-green?style=for-the-badge&logo=Node.js&logoColor=#9FEF00&labelColor=red)](https://git.io/streak-stats)
+[![GitHub Streak](https://img.shields.io/badge/Arduino-9cf?style=for-the-badge&logo=Arduino&logoColor=#9FEF00&labelColor=red)](https://git.io/streak-stats)
+
+
 ---
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=luis-fer993&show_icons=true&theme=gotham)
