@@ -1,4 +1,4 @@
-<h1 > Hello, I am Luis Fernando. 👨‍💻  🇨🇴</h1
+<h1 > Hello, I am Luis Fernando. 👨‍💻  </h1
 
 
 
@@ -24,7 +24,6 @@
 
 [![GitHub Streak](https://img.shields.io/badge/Hack%20The%20Box-blue?style=for-the-badge&logo=Hack%20The%20Box&logoColor=#9FEF00&labelColor=red)](https://git.io/streak-stats)
 [![GitHub Streak](https://img.shields.io/badge/Node.js-green?style=for-the-badge&logo=Node.js&logoColor=#9FEF00&labelColor=red)](https://git.io/streak-stats)
-[![GitHub Streak](https://img.shields.io/badge/Arduino-9cf?style=for-the-badge&logo=Arduino&logoColor=#9FEF00&labelColor=red)](https://git.io/streak-stats)
 
 
 ---
