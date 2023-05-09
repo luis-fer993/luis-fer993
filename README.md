@@ -1,4 +1,4 @@
-<h1 > Hello, I am Luis Fernando. 👨‍💻  </h1
+<h1 > Hello, I am Luis Fernando.  </h1
 
 
 
@@ -30,7 +30,8 @@
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=luis-fer993&show_icons=true&theme=gotham)
   
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=luis-fer993&theme=gotham)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=luis-fer993&hide_progress=true&langs_count=8&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+ 
   
 ![fallo img](https://github.com/luis-fer993/luis-fer993/blob/main/github-contribution-grid-snake.gif?raw=true "Imagen_gif")
   
