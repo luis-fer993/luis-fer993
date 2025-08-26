@@ -29,31 +29,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form Submission
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
-        
-        // Simple validation
-        if (!name || !email || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-        
-        // Here you would normally send the data to a server
-        // For demo purposes, we'll just show a success message
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        contactForm.reset();
-    });
-}
-
 // Scroll Animation
 const observerOptions = {
     threshold: 0.1,
@@ -77,18 +52,71 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Typing Effect for Hero Title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
+// Typing Effect for Hero Title - Fixed to preserve HTML structure
+function typeWriter(element, htmlContent, speed = 50) {
+    // Create a temporary div to parse the HTML
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = htmlContent;
+    
+    // Extract text content while preserving structure
+    const textNodes = [];
+    const walker = document.createTreeWalker(
+        tempDiv,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+    );
+    
+    let node;
+    while (node = walker.nextNode()) {
+        textNodes.push({
+            node: node,
+            text: node.textContent,
+            originalLength: node.textContent.length
+        });
+    }
+    
+    // Clear the element
     element.innerHTML = '';
     
+    // Rebuild structure
+    let currentNodeIndex = 0;
+    let currentCharIndex = 0;
+    
     function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
+        if (currentNodeIndex < textNodes.length) {
+            const currentNode = textNodes[currentNodeIndex];
+            
+            if (currentCharIndex === 0) {
+                // Create the appropriate element for this text node
+                const parent = currentNode.node.parentNode;
+                if (parent && parent !== tempDiv) {
+                    // This text is inside a span or other element
+                    const span = document.createElement(parent.tagName.toLowerCase());
+                    if (parent.className) {
+                        span.className = parent.className;
+                    }
+                    element.appendChild(span);
+                    span.appendChild(document.createTextNode(''));
+                } else {
+                    // This is direct text content
+                    element.appendChild(document.createTextNode(''));
+                }
+            }
+            
+            const targetElement = element.lastChild;
+            if (currentCharIndex < currentNode.text.length) {
+                targetElement.textContent += currentNode.text[currentCharIndex];
+                currentCharIndex++;
+                setTimeout(type, speed);
+            } else {
+                currentNodeIndex++;
+                currentCharIndex = 0;
+                setTimeout(type, speed);
+            }
         }
     }
+    
     type();
 }
 
@@ -96,8 +124,8 @@ function typeWriter(element, text, speed = 100) {
 window.addEventListener('load', () => {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        typeWriter(heroTitle, originalText, 50);
+        const originalHTML = heroTitle.innerHTML;
+        typeWriter(heroTitle, originalHTML, 50);
     }
 });
 
